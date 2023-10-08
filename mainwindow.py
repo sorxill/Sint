@@ -5,6 +5,9 @@ import footerwindow
 import converterwindow
 import decoratorwindow
 import renderwindow
+import iteratorwindow
+import groupwindow
+import strategywindow
 
 # Тут использовался singleton, гарантирует, что в приложении будет
 #только один экземпляр класса Window
@@ -28,6 +31,15 @@ class Window(Tk, Singleton):
         self.button = Button(self, text="render", command=self.create_render)
         self.button.pack(expand=True)
 
+        self.button = Button(self, text="iterator", command=self.create_iterator)
+        self.button.pack(expand=True)
+
+        self.button = Button(self, text="Group", command=self.create_group)
+        self.button.pack(expand=True)
+
+        self.button = Button(self, text="Strategy", command=self.create_strategy)
+        self.button.pack(expand=True)
+
 
     def create_window_eqs(self):
             global extraWindow
@@ -48,6 +60,18 @@ class Window(Tk, Singleton):
     def create_render(self):
             global extraWindow
             extraWindow = renderwindow.Extra()
+
+    def create_iterator(self):
+            global extraWindow
+            extraWindow = iteratorwindow.Extra()
+        
+    def create_group(self):
+            global extraWindow
+            extraWindow = groupwindow.Extra()
+
+    def create_strategy(self):
+            global extraWindow
+            extraWindow = strategywindow.Extra()
 
 
     def __init__(self):

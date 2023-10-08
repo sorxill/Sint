@@ -1,4 +1,4 @@
-from mainwindow import Window
+from all_windows.mainwindow import Window
 
 
 

@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractclassmethod
 
-# Фабричный метод - Это МЕТОД, пораждает объект который нам нужен/указываем
+# Фабричный метод - Это МЕТОД, порождает объект который нам нужен/указываем
 
 class Plugin(metaclass=ABCMeta):
     @abstractclassmethod
